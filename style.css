@@ -6,18 +6,18 @@
 }
 
 body{
-    background:#f5f5f5;
+    background: white;
 }
 
 .container{
-    width:97%;
-    min-height:96vh;
-    margin:auto;
-    border:1px solid #999;
+    width:95%;
+    max-width:1200px;
+    min-height:100vh;
+    margin:20px auto;
+    border:1px solid black;
+    background:#fff;
     padding:20px 50px;
-    align-items: center;
 }
-
 
 nav{
     display:flex;
@@ -32,13 +32,13 @@ nav{
     font-weight:bold;
 }
 
-ul{
+nav ul{
     display:flex;
     list-style:none;
     gap:30px;
 }
 
-ul li a{
+nav ul li a{
     text-decoration:none;
     color:#555;
     font-size:18px;
@@ -46,12 +46,13 @@ ul li a{
 
 .resume-btn{
     text-decoration:none;
-    background:#e79ac8;
+    background:#f3a7d8;
     color:#8a0054;
     padding:12px 20px;
-    border-radius:8px;
+    border-radius:10px;
     font-weight:bold;
 }
+
 
 .hero{
     display:flex;
@@ -66,20 +67,20 @@ ul li a{
 }
 
 .left h1{
-    font-size:50px;
+    font-size:55px;
     color:#333;
 }
 
 .left h2{
-    font-size:45px;
+    font-size:50px;
     color:#b84cff;
     margin-bottom:20px;
 }
 
 .left p{
     font-size:18px;
-    line-height:1.8;
     color:#666;
+    line-height:1.8;
     margin-bottom:30px;
 }
 
@@ -99,25 +100,34 @@ ul li a{
 }
 
 .right img{
-    width:400px;
+    width:450px;
     max-width:100%;
 }
 
 /* Tablet View */
 
-@media (max-width:992px){
+@media(max-width:992px){
+
+    .container{
+        padding:20px;
+    }
 
     .logo{
         font-size:28px;
     }
 
-    ul li a{
+    nav ul{
+        display:flex;
+        gap:15px;
+    }
+
+    nav ul li a{
         font-size:14px;
     }
 
     .resume-btn{
-        font-size:13px;
         padding:10px 15px;
+        font-size:13px;
     }
 
     .left h1{
@@ -133,36 +143,35 @@ ul li a{
     }
 
     .right img{
-        width:300px;
+        width:320px;
     }
 }
 
 /* Mobile View */
 
-@media (max-width:768px){
+@media(max-width:600px){
 
     .container{
         width:95%;
-        padding:20px;
+        padding:15px;
     }
 
     nav{
-        display:flex;
-        justify-content:center;
-        align-items:center;
+        justify-content:space-between;
     }
 
-    ul{
+    nav ul{
         display:none;
     }
 
     .resume-btn{
-        display:none;
+        display:block;
+        padding:8px 12px;
+        font-size:12px;
     }
 
     .logo{
-        display:block;
-        font-size:30px;
+        font-size:26px;
     }
 
     .hero{
@@ -171,6 +180,14 @@ ul li a{
         gap:20px;
         min-height:auto;
         padding:20px 0;
+    }
+
+    .right{
+        order:1;
+    }
+
+    .left{
+        order:2;
     }
 
     .right img{
@@ -187,6 +204,7 @@ ul li a{
 
     .left p{
         font-size:14px;
+        line-height:1.6;
     }
 
     .left button{
@@ -195,10 +213,14 @@ ul li a{
 }
 
 
-.a:hover,.a:focus{
-    text-decoration: underline;
+nav ul li a:hover{
+    text-decoration:underline;
 }
 
-button:hover,button:focus{
-    text-decoration: underline;
+.resume-btn:hover{
+    opacity:0.9;
+}
+
+.left button:hover{
+    opacity:0.9;
 }
